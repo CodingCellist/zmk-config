@@ -1,11 +1,9 @@
 on: [push, pull_request, workflow_dispatch]
 
-on:
-  workflow_call:
-    inputs:
-      build_matrix_path: "./zmk-config/build.yaml"
-
 jobs:
   zmk_build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      inputs:
+        build_matrix_path: "./zmk-config/build.yaml"
 

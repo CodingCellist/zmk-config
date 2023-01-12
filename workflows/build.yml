@@ -6,5 +6,5 @@ jobs:
     with:
       build_matrix_path: "./zmk-config/build.yaml"
       config_path: "./zmk-config/config"
-      archive_name: "./zmk-config/zen-v2-firmware"
+      archive_name: "zen-v2-firmware"
 

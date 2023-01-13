@@ -32,7 +32,9 @@
 #define daACUTE   (EQUAL)       // ́́  := =
 #define daUMLA    (RBKT)        // ̈  := ]
 #define daSQT     (BSLH)        // ' := \
+
 #define daLSTH    (NON_US_BSLH) // < := \ (other-more-different-\)
+
 #define daMINUS   (FSLH)        // - := /
 
 
@@ -53,6 +55,7 @@
 #define daGRAVE   LS(daACUTE)   // ` := LS+́ 
 #define daCARET   LS(daUMLA)    // ^ := LS+̈ 
 #define daSTAR    LS(daSQT)     // * := LS+'
+
 #define daGTTH    LS(daLSTH)    // > := LS+<
 
 #define daSEMI    LS(COMMA)     // , := LS+,
@@ -75,7 +78,9 @@
 #define daPIPE    RA(daACUTE)   // | := RA+́
 #define daEURE    RA(E)         // € := RA+E
 #define daTILDE   RA(daUMLA)    // ~ := RA+̈ 
+
 #define daBSLH    RA(daLSTH)    // \ := RA+<
+
 #define daMU      RA(M)         // µ := RA+M
 
 
@@ -86,7 +91,9 @@
 #define daHALV    (daHALF)      // halv (brøktegn)
 #define daACCENT  (daACUTE)     // accenttegn
 #define daAIGU    (daACUTE)     // accent-aigu (accenttegn)
+
 #define daMINDRE  (daLSTH)      // mindre end
+
 #define daAPO     (daSQT)       // apostrof
 #define daKOMMA   (COMMA)       // komma
 #define daPKNTM   (DOT)         // punktum

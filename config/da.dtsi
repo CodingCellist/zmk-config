@@ -32,10 +32,7 @@
 #define daACUTE   (EQUAL)       // ́́  := =
 #define daUMLA    (RBKT)        // ̈  := ]
 #define daSQT     (BSLH)        // ' := \
-
-// daLT is cursed for some reason... #define daLT      (NON_US_BSLH) // < := \ (other-more-different-\)
 #define daLSTH    (NON_US_BSLH) // < := \ (other-more-different-\)
-
 #define daMINUS   (FSLH)        // - := /
 
 
@@ -56,9 +53,6 @@
 #define daGRAVE   LS(daACUTE)   // ` := LS+́ 
 #define daCARET   LS(daUMLA)    // ^ := LS+̈ 
 #define daSTAR    LS(daSQT)     // * := LS+'
-
-// daLT is cursed for some reason #define daGT      LS(daLT)      // > := LS+<
-// #define daGT      LS(NON_US_BSLH)      // > := LS+<
 #define daGTTH    LS(daLSTH)    // > := LS+<
 
 #define daSEMI    LS(COMMA)     // , := LS+,
@@ -81,11 +75,7 @@
 #define daPIPE    RA(daACUTE)   // | := RA+́
 #define daEURE    RA(E)         // € := RA+E
 #define daTILDE   RA(daUMLA)    // ~ := RA+̈ 
-
-// daLT is cursed for some reason... #define daBSLH    RA(daLT)      // \ := RA+<
-// #define daBSLH    RA(NON_US_BSLH)      // \ := RA+<
 #define daBSLH    RA(daLSTH)    // \ := RA+<
-
 #define daMU      RA(M)         // µ := RA+M
 
 
@@ -96,10 +86,7 @@
 #define daHALV    (daHALF)      // halv (brøktegn)
 #define daACCENT  (daACUTE)     // accenttegn
 #define daAIGU    (daACUTE)     // accent-aigu (accenttegn)
-
-// daLT is cursed for some reason... #define daMINDRE  (daLT)        // mindre end
 #define daMINDRE  (daLSTH)      // mindre end
-
 #define daAPO     (daSQT)       // apostrof
 #define daKOMMA   (COMMA)       // komma
 #define daPKNTM   (DOT)         // punktum

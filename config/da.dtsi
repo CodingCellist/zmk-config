@@ -35,7 +35,6 @@
 
 // daLT is cursed for some reason... #define daLT      (NON_US_BSLH) // < := \ (other-more-different-\)
 #define daLSTH    (NON_US_BSLH) // < := \ (other-more-different-\)
-#define daMINDRE  (NON_US_BSLH) // mindre end (other-more-different-\)
 
 #define daMINUS   (FSLH)        // - := /
 
@@ -60,7 +59,7 @@
 
 // daLT is cursed for some reason #define daGT      LS(daLT)      // > := LS+<
 // #define daGT      LS(NON_US_BSLH)      // > := LS+<
-#define daGT      LS(daMINDRE)      // > := LS+<
+#define daGTTH    LS(daLSTH)    // > := LS+<
 
 #define daSEMI    LS(COMMA)     // , := LS+,
 #define daCOLON   LS(DOT)       // : := LS+.
@@ -85,7 +84,7 @@
 
 // daLT is cursed for some reason... #define daBSLH    RA(daLT)      // \ := RA+<
 // #define daBSLH    RA(NON_US_BSLH)      // \ := RA+<
-#define daBSLH    RA(daMINDRE)      // \ := RA+<
+#define daBSLH    RA(daLSTH)    // \ := RA+<
 
 #define daMU      RA(M)         // µ := RA+M
 
@@ -99,6 +98,7 @@
 #define daAIGU    (daACUTE)     // accent-aigu (accenttegn)
 
 // daLT is cursed for some reason... #define daMINDRE  (daLT)        // mindre end
+#define daMINDRE  (daLSTH)      // mindre end
 
 #define daAPO     (daSQT)       // apostrof
 #define daKOMMA   (COMMA)       // komma

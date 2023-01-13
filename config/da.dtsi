@@ -32,7 +32,7 @@
 #define daACUTE   EQUAL         // ́́  := =
 #define daUMLA    RBKT          // ̈  := ]
 #define daSQT     BSLH          // ' := \
-#define daLT      NON_US_BACKSLASH   // < := \ (other-more-different-\)
+#define daLT      (NON_US_BSLH) // < := \ (other-more-different-\)
 #define daMINUS   FSLH          // - := /
 
 

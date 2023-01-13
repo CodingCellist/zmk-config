@@ -22,18 +22,18 @@
 // NO MODIFIERS //
 
 // letters
-#define daAA      LBKT          // Å := [
-#define daOE      SQT           // Ø := '
-#define daAE      SEMI          // Æ := ;
+#define daAA      (LBKT)        // Å := [
+#define daOE      (SQT)         // Ø := '
+#define daAE      (SEMI)        // Æ := ;
 
 // numbers and symbols
-#define daHALF    GRAVE         // ½ := `
-#define daPLUS    MINUS         // + := -
-#define daACUTE   EQUAL         // ́́  := =
-#define daUMLA    RBKT          // ̈  := ]
-#define daSQT     BSLH          // ' := \
+#define daHALF    (GRAVE)       // ½ := `
+#define daPLUS    (MINUS)       // + := -
+#define daACUTE   (EQUAL)       // ́́  := =
+#define daUMLA    (RBKT)        // ̈  := ]
+#define daSQT     (BSLH)        // ' := \
 #define daLT      (NON_US_BSLH) // < := \ (other-more-different-\)
-#define daMINUS   FSLH          // - := /
+#define daMINUS   (FSLH)        // - := /
 
 
 // SHIFT  //
@@ -81,40 +81,40 @@
 // DANISH MACROS //
 
 // no modifiers
-#define daBRKTGN  daHALF        // brøktegn
-#define daHALV    daHALF        // halv (brøktegn)
-#define daACCENT  daACUTE       // accenttegn
-#define daAIGU    daACUTE       // accent-aigu (accenttegn)
-#define daMINDRE  daLT          // mindre end
-#define daAPO     daSQT         // apostrof
-#define daKOMMA   COMMA         // komma
-#define daPKNTM   DOT           // punktum
-#define daBINDE   daMINUS       // bindestreg
+#define daBRKTGN  (daHALF)      // brøktegn
+#define daHALV    (daHALF)      // halv (brøktegn)
+#define daACCENT  (daACUTE)     // accenttegn
+#define daAIGU    (daACUTE)     // accent-aigu (accenttegn)
+#define daMINDRE  (daLT)        // mindre end
+#define daAPO     (daSQT)       // apostrof
+#define daKOMMA   (COMMA)       // komma
+#define daPKNTM   (DOT)         // punktum
+#define daBINDE   (daMINUS)     // bindestreg
 
 // Shift
-#define daPARA    daSECT        // paragraftegn
-#define daUDRB    daEXCL        // udråbstegn
-#define daCIT     daDQT         // citationstegn
-#define daFIRK    daHASH        // firkant
-#define daVALUTA  daCURR        // valutategn
-#define daPROC    daPERC        // procenttegn
-#define daOGSYMB  daAMPS        // og-symbol
-#define daSKRSTR  daFSLH        // skråstreg
-#define daLIGMED  daEQUAL       // ligmedtegn
-#define daSPMTGN  daQMARK       // spørgsmålstegn
-#define daCIRKUM  daCARET       // cirkumfleks
-#define daCIRCON  daCARET       // circonflexe
-#define daSTRRE   daGT          // større end
+#define daPARA    (daSECT)      // paragraftegn
+#define daUDRB    (daEXCL)      // udråbstegn
+#define daCIT     (daDQT)       // citationstegn
+#define daFIRK    (daHASH)      // firkant
+#define daVALUTA  (daCURR)      // valutategn
+#define daPROC    (daPERC)      // procenttegn
+#define daOGSYMB  (daAMPS)      // og-symbol
+#define daSKRSTR  (daFSLH)      // skråstreg
+#define daLIGMED  (daEQUAL)     // ligmedtegn
+#define daSPMTGN  (daQMARK)     // spørgsmålstegn
+#define daCIRKUM  (daCARET)     // cirkumfleks
+#define daCIRCON  (daCARET)     // circonflexe
+#define daSTRRE   (daGT)        // større end
 
 // AltGr
-#define daSNABEL  daAT          // snabel-a
-#define daPUND    daGBP         // pundtegn
-#define daDOLLAR  daUSD         // dollartegn
-#define daVTUBOR  daLBRC        // venstre tuborgklamme
-#define daVKLAMM  daLBKT        // venstre klamme
-#define daHKLAMM  daRBKT        // højre klamme
-#define daHTUBOR  daRBRC        // højre tuborgklamme
-#define daLODRET  daPIPE        // lodret streg
-#define daOMVSKR  daBSLH        // omvendt skråstreg
-#define daMY      daMU          // my (gr bogstav)
+#define daSNABEL  (daAT)        // snabel-a
+#define daPUND    (daGBP)       // pundtegn
+#define daDOLLAR  (daUSD)       // dollartegn
+#define daVTUBOR  (daLBRC)      // venstre tuborgklamme
+#define daVKLAMM  (daLBKT)      // venstre klamme
+#define daHKLAMM  (daRBKT)      // højre klamme
+#define daHTUBOR  (daRBRC)      // højre tuborgklamme
+#define daLODRET  (daPIPE)      // lodret streg
+#define daOMVSKR  (daBSLH)      // omvendt skråstreg
+#define daMY      (daMU         // my (gr bogstav)
 

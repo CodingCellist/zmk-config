@@ -52,7 +52,7 @@
 #define daQMARK   LS(daPLUS)    // ? := LS+'+'
 #define daGRAVE   LS(daACUTE)   // ` := LS+́ 
 #define daCARET   LS(daUMLA)    // ^ := LS+̈ 
-#define daSTAR    LS(daAPO)     // * := LS+'
+#define daSTAR    LS(daSQT)     // * := LS+'
 #define daGT      LS(daLT)      // > := LS+<
 #define daSEMI    LS(COMMA)     // , := LS+,
 #define daCOLON   LS(DOT)       // : := LS+.

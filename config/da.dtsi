@@ -34,7 +34,8 @@
 #define daSQT     (BSLH)        // ' := \
 
 // daLT is cursed for some reason... #define daLT      (NON_US_BSLH) // < := \ (other-more-different-\)
-#define daMINDRE  (NON_US_BSLH) // mindre end
+#define daLSTH    (NON_US_BSLH) // < := \ (other-more-different-\)
+#define daMINDRE  (NON_US_BSLH) // mindre end (other-more-different-\)
 
 #define daMINUS   (FSLH)        // - := /
 

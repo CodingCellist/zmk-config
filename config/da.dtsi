@@ -116,5 +116,5 @@
 #define daHTUBOR  (daRBRC)      // højre tuborgklamme
 #define daLODRET  (daPIPE)      // lodret streg
 #define daOMVSKR  (daBSLH)      // omvendt skråstreg
-#define daMY      (daMU         // my (gr bogstav)
+#define daMY      (daMU)        // my (gr bogstav)
 

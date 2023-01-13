@@ -1,0 +1,68 @@
+/*  Danish keymaps/macros for ZMK configuration.
+ *
+ *  Copyright (C) 2023 Thomas E. Hansen (CodingCellist)
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; version 2 of the License.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  SPDX-License-Identifier: GPL-2.0
+ */
+
+
+// NO MODIFIERS //
+
+// letters
+#define daAA      LBKT          // Å := [
+#define daOE      SQT           // Ø := '
+#define daAE      SEMI          // Æ := ;
+
+// numbers and symbols
+#define daSECT    GRAVE         // § := `
+#define daPLUS    MINUS         // + := -
+#define daACUTE   EQUAL         // ́́  := =
+#define daUMLA    RBKT          // ̈  := ]
+#define daSQT     BSLH          // ' := \
+#define daLT      NON_US_BSLH   // < := \ (other-more-different-\)
+#define daMINUS   FSLH          // - := /
+
+
+// SHIFT  //
+
+#define daEXCL    LS(N1)        // ! := LS+1
+#define daCIT     LS(N2)        // " := LS+2
+#define daHASH    LS(N3)        // # := LS+3
+#define daCURR    LS(N4)        // ¤ := LS+4
+#define daPERC    LS(N5)        // % := LS+5
+#define daAMPS    LS(N6)        // & := LS+6
+#define daFSLH    LS(N7)        // / := LS+7
+#define daLPAR    LS(N8)        // ( := LS+8
+#define daRPAR    LS(N9)        // ) := LS+9
+#define daEQUAL   LS(N0)        // = := LS+0
+#define daQMARK   LS(daPLUS)    // ? := LS+'+'
+#define daGRAVE   LS(daACUTE)   // ` := LS+́ 
+#define daCIRCO   LS(daUMLA)    // ^ := LS+̈ 
+#define daSTAR    LS(daAPO)     // * := LS+'
+#define daGT      LS(daLT)      // > := LS+<
+#define daSEMI    LS(COMMA)     // , := LS+,
+#define daCOLON   LS(DOT)       // : := LS+.
+#define daUNDER   LS(daMINUS)   // _ := LS+-
+
+
+// Danish macros //
+
+#define daPARA    daSECT        // paragraftegn
+#define daVALUTA  daCURR        // valutategn
+#define daAPO     daSQT         // apostrof
+#define daFIRK    daHASH        // firkant
+#define daOGSYMB  daAMPS        // og-symbol
+

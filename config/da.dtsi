@@ -22,108 +22,108 @@
 // NO MODIFIERS //
 
 // letters
-#define daAA      (LBKT)        // Å := [
-#define daOE      (SQT)         // Ø := '
-#define daAE      (SEMI)        // Æ := ;
+#define daAA      (LBKT)        /*  Å := [                           */
+#define daOE      (SQT)         /*  Ø := '                           */
+#define daAE      (SEMI)        /*  Æ := ;                           */
 
 // numbers and symbols
-#define daHALF    (GRAVE)       // ½ := `
-#define daPLUS    (MINUS)       // + := -
-#define daACUTE   (EQUAL)       // ́́  := =
-#define daUMLA    (RBKT)        // ̈  := ]
+#define daHALF    (GRAVE)       /*  ½ := `                           */
+#define daPLUS    (MINUS)       /*  + := -                           */
+#define daACUTE   (EQUAL)       /*  ́́  := =                           */
+#define daUMLA    (RBKT)        /*  ̈  := ]                           */
 
-#define daSQT     (BSLH)        // ' := \
+#define daSQT     (BSLH)        /*  ' := \                           */
 
-#define daLT      (NON_US_BSLH) // < := \ (other-more-different-\)
+#define daLT      (NON_US_BSLH) /*  < := \ (other-more-different-\)  */
 
-#define daMINUS   (FSLH)        // - := /
+#define daMINUS   (FSLH)        /*  - := /                           */
 
 
 // SHIFT  //
 
-#define daSECT    LS(daHALF)    // § := LS+½
-#define daEXCL    LS(N1)        // ! := LS+1
-#define daDQT     LS(N2)        // " := LS+2
-#define daHASH    LS(N3)        // # := LS+3
-#define daCURR    LS(N4)        // ¤ := LS+4
-#define daPERC    LS(N5)        // % := LS+5
-#define daAMPS    LS(N6)        // & := LS+6
-#define daFSLH    LS(N7)        // / := LS+7
-#define daLPAR    LS(N8)        // ( := LS+8
-#define daRPAR    LS(N9)        // ) := LS+9
-#define daEQUAL   LS(N0)        // = := LS+0
-#define daQMARK   LS(daPLUS)    // ? := LS+'+'
-#define daGRAVE   LS(daACUTE)   // ` := LS+́ 
-#define daCARET   LS(daUMLA)    // ^ := LS+̈ 
-#define daSTAR    LS(daSQT)     // * := LS+'
+#define daSECT    LS(daHALF)    /*  § := LS+½    */
+#define daEXCL    LS(N1)        /*  ! := LS+1    */
+#define daDQT     LS(N2)        /*  " := LS+2    */
+#define daHASH    LS(N3)        /*  # := LS+3    */
+#define daCURR    LS(N4)        /*  ¤ := LS+4    */
+#define daPERC    LS(N5)        /*  % := LS+5    */
+#define daAMPS    LS(N6)        /*  & := LS+6    */
+#define daFSLH    LS(N7)        /*  / := LS+7    */
+#define daLPAR    LS(N8)        /*  ( := LS+8    */
+#define daRPAR    LS(N9)        /*  ) := LS+9    */
+#define daEQUAL   LS(N0)        /*  = := LS+0    */
+#define daQMARK   LS(daPLUS)    /*  ? := LS+'+'  */
+#define daGRAVE   LS(daACUTE)   /*  ` := LS+́     */
+#define daCARET   LS(daUMLA)    /*  ^ := LS+̈     */
+#define daSTAR    LS(daSQT)     /*  * := LS+'    */
 
-#define daGT      LS(daLT)    // > := LS+<
+#define daGT      LS(daLT)      /*  > := LS+<    */
 
-#define daSEMI    LS(COMMA)     // , := LS+,
-#define daCOLON   LS(DOT)       // : := LS+.
-#define daUNDER   LS(daMINUS)   // _ := LS+-
+#define daSEMI    LS(COMMA)     /*  , := LS+,    */
+#define daCOLON   LS(DOT)       /*  : := LS+.    */
+#define daUNDER   LS(daMINUS)   /*  _ := LS+-    */
 
 
 // ALTGR //
 
 // note: AltGr is also called "Right Alt", hence RA
 
-#define daAT      RA(N2)        // @ := RA+2
-#define daGBP     RA(N3)        // £ := RA+3
-#define daUSD     RA(N4)        // $ := RA+4
-#define daEUR5    RA(N5)        // € := RA+5
-#define daLBRC    RA(N7)        // { := RA+7
-#define daLBKT    RA(N8)        // [ := RA+8
-#define daRBKT    RA(N9)        // ] := RA+9
-#define daRBRC    RA(N0)        // } := RA+0
-#define daPIPE    RA(daACUTE)   // | := RA+́
-#define daEURE    RA(E)         // € := RA+E
-#define daTILDE   RA(daUMLA)    // ~ := RA+̈ 
+#define daAT      RA(N2)        /*  @ := RA+2  */
+#define daGBP     RA(N3)        /*  £ := RA+3  */
+#define daUSD     RA(N4)        /*  $ := RA+4  */
+#define daEUR5    RA(N5)        /*  € := RA+5  */
+#define daLBRC    RA(N7)        /*  { := RA+7  */
+#define daLBKT    RA(N8)        /*  [ := RA+8  */
+#define daRBKT    RA(N9)        /*  ] := RA+9  */
+#define daRBRC    RA(N0)        /*  } := RA+0  */
+#define daPIPE    RA(daACUTE)   /*  | := RA+́   */
+#define daEURE    RA(E)         /*  € := RA+E  */
+#define daTILDE   RA(daUMLA)    /*  ~ := RA+̈   */
 
-#define daBSLH    RA(daLT)      // \ := RA+<
+#define daBSLH    RA(daLT)      /*  \ := RA+<  */
 
-#define daMU      RA(M)         // µ := RA+M
+#define daMU      RA(M)         /*  µ := RA+M  */
 
 
 // DANISH MACROS //
 
 // no modifiers
-#define daBRKTGN  (daHALF)      // brøktegn
-#define daHALV    (daHALF)      // halv (brøktegn)
-#define daACCENT  (daACUTE)     // accenttegn
-#define daAIGU    (daACUTE)     // accent-aigu (accenttegn)
+#define daBRKTGN  (daHALF)      /*  brøktegn                  */
+#define daHALV    (daHALF)      /*  halv (brøktegn)           */
+#define daACCENT  (daACUTE)     /*  accenttegn                */
+#define daAIGU    (daACUTE)     /*  accent-aigu (accenttegn)  */
 
-#define daMINDRE  (daLT)        // mindre end
+#define daMINDRE  (daLT)        /*  mindre end                */
 
-#define daAPO     (daSQT)       // apostrof
-#define daKOMMA   (COMMA)       // komma
-#define daPKNTM   (DOT)         // punktum
-#define daBINDE   (daMINUS)     // bindestreg
+#define daAPO     (daSQT)       /*  apostrof                  */
+#define daKOMMA   (COMMA)       /*  komma                     */
+#define daPKNTM   (DOT)         /*  punktum                   */
+#define daBINDE   (daMINUS)     /*  bindestreg                */
 
 // Shift
-#define daPARA    (daSECT)      // paragraftegn
-#define daUDRB    (daEXCL)      // udråbstegn
-#define daCIT     (daDQT)       // citationstegn
-#define daFIRK    (daHASH)      // firkant
-#define daVALUTA  (daCURR)      // valutategn
-#define daPROC    (daPERC)      // procenttegn
-#define daOGSYMB  (daAMPS)      // og-symbol
-#define daSKRSTR  (daFSLH)      // skråstreg
-#define daLIGMED  (daEQUAL)     // ligmedtegn
-#define daSPMTGN  (daQMARK)     // spørgsmålstegn
-#define daCIRKUM  (daCARET)     // cirkumfleks
-#define daCIRCON  (daCARET)     // circonflexe
-#define daSTRRE   (daGT)        // større end
+#define daPARA    (daSECT)      /*  paragraftegn              */
+#define daUDRB    (daEXCL)      /*  udråbstegn                */
+#define daCIT     (daDQT)       /*  citationstegn             */
+#define daFIRK    (daHASH)      /*  firkant                   */
+#define daVALUTA  (daCURR)      /*  valutategn                */
+#define daPROC    (daPERC)      /*  procenttegn               */
+#define daOGSYMB  (daAMPS)      /*  og-symbol                 */
+#define daSKRSTR  (daFSLH)      /*  skråstreg                 */
+#define daLIGMED  (daEQUAL)     /*  ligmedtegn                */
+#define daSPMTGN  (daQMARK)     /*  spørgsmålstegn            */
+#define daCIRKUM  (daCARET)     /*  cirkumfleks               */
+#define daCIRCON  (daCARET)     /*  circonflexe               */
+#define daSTRRE   (daGT)        /*  større end                */
 
 // AltGr
-#define daSNABEL  (daAT)        // snabel-a
-#define daPUND    (daGBP)       // pundtegn
-#define daDOLLAR  (daUSD)       // dollartegn
-#define daVTUBOR  (daLBRC)      // venstre tuborgklamme
-#define daVKLAMM  (daLBKT)      // venstre klamme
-#define daHKLAMM  (daRBKT)      // højre klamme
-#define daHTUBOR  (daRBRC)      // højre tuborgklamme
-#define daLODRET  (daPIPE)      // lodret streg
-#define daOMVSKR  (daBSLH)      // omvendt skråstreg
-#define daMY      (daMU)        // my (gr bogstav)
+#define daSNABEL  (daAT)        /*  snabel-a                  */
+#define daPUND    (daGBP)       /*  pundtegn                  */
+#define daDOLLAR  (daUSD)       /*  dollartegn                */
+#define daVTUBOR  (daLBRC)      /*  venstre tuborgklamme      */
+#define daVKLAMM  (daLBKT)      /*  venstre klamme            */
+#define daHKLAMM  (daRBKT)      /*  højre klamme              */
+#define daHTUBOR  (daRBRC)      /*  højre tuborgklamme        */
+#define daLODRET  (daPIPE)      /*  lodret streg              */
+#define daOMVSKR  (daBSLH)      /*  omvendt skråstreg         */
+#define daMY      (daMU)        /*  my (gr bogstav)           */
 

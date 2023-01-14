@@ -101,7 +101,7 @@
    &kp daPIPE &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P       &kp daAA
    &kp TAB    &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp daAE    &kp daOE
    &kp daLT   &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp daMINUS &kp daAPO
-             &td0  &mt ESC LCTRL  &shft_gui    &mt ENTER RCTRL  &mt SPACE RALT  &lt LAYER_2 BSPC
+             &td0  &mt LCTRL ESC  &shft_gui    &mt RCTRL ENTER  &mt RALT SPACE  &lt LAYER_2 BSPC
                         >;
                 };
 
@@ -117,7 +117,7 @@
    &kp daHALF &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &kp F11
    &kp TAB    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp daPLUS
    &kp daLT   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp daAPO
-                    &td1  &mt ESC LCTRL  &shft_lsgui    &mt ENTER RCTRL  &mt SPACE RALT  &lt LAYER_2 BSPC
+                    &td1  &mt LCTRL ESC  &shft_lsgui    &mt RCTRL ENTER  &mt RALT SPACE  &lt LAYER_2 BSPC
                         >;
                 };
 
@@ -133,7 +133,7 @@
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp C_VOL_UP    &trans    &trans &kp daAIGU &trans &trans &trans
    &kp TAB      &kp C_BRI_UP &kp PG_UP    &kp UP       &kp PG_DN    &kp C_VOL_DN    &trans    &trans &kp daUMLA &trans &trans &trans
    &bt BT_CLR   &kp C_BRI_DN &kp LEFT     &kp DOWN     &kp RIGHT    &kp C_MUTE      &kp PSCRN &trans &kp daAPO  &trans &trans &trans
-                                                  &td2  &mt ESC LCTRL  &kp LSHFT    &mt ENTER RCTRL  &mt SPACE RALT  &kp BSPC
+                                                  &td2  &mt LCTRL ESC  &kp LSHFT    &mt RCTRL ENTER  &mt RALT SPACE  &kp BSPC
                         >;
                 };
 

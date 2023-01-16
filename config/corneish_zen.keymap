@@ -42,6 +42,7 @@
         // layers respectively. Additionaly, one must be careful to reference
         // the right tap-dances in their respective layers.
         behaviors {
+
             // NEXT and PREV for default layer
             td0: tap_dance_0 {
                     compatible = "zmk,behavior-tap-dance";
@@ -86,7 +87,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_N1_F1";
                     #binding-cells= <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <150>;
                     bindings = <&kp N1>, <&kp F1>;
             };
 
@@ -95,7 +96,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_N2_F2";
                     #binding-cells= <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <150>;
                     bindings = <&kp N2>, <&kp F2>;
             };
 
@@ -104,7 +105,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_N3_F3";
                     #binding-cells= <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <150>;
                     bindings = <&kp N3>, <&kp F3>;
             };
 
@@ -113,7 +114,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_N4_F4";
                     #binding-cells= <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <150>;
                     bindings = <&kp N4>, <&kp F4>;
             };
 
@@ -122,7 +123,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_N5_F5";
                     #binding-cells= <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <150>;
                     bindings = <&kp N5>, <&kp F5>;
             };
 
@@ -131,7 +132,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_N6_F6";
                     #binding-cells= <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <150>;
                     bindings = <&kp N6>, <&kp F6>;
             };
 
@@ -140,7 +141,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_N7_F7";
                     #binding-cells= <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <150>;
                     bindings = <&kp N7>, <&kp F7>;
             };
 
@@ -149,7 +150,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_N8_F8";
                     #binding-cells= <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <150>;
                     bindings = <&kp N8>, <&kp F8>;
             };
 
@@ -158,7 +159,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_N9_F9";
                     #binding-cells= <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <150>;
                     bindings = <&kp N9>, <&kp F9>;
             };
 
@@ -167,9 +168,10 @@
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_N0_F0";
                     #binding-cells= <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <150>;
                     bindings = <&kp N0>, <&kp F10>;
             };
+
         };
 
         keymap {
@@ -194,15 +196,15 @@
                 layer_1 {
                         label = "FNUM";
 // -----------------------------------------------------------------------------------------
-// | '½' | i3W1 | i3W2 | i3W3 | i3W4 | i3W5 |    | i3W6 | i3W7 | i3W8 | i3W9 | i3W0  |  ?  |
-// | TAB | 1/F1 | 2/F2 | 3/F3 | 4/F4 | 5/F5 |    | 6/F6 | 7/F7 | 8/F8 | 9/F9 | 0/F10 |  +  |
-// |  <  |   ¡  |   @  |   £  |   $  |      |    |  '   |  {   |  [   |  ]   |  }    |  \  |
+// | '½' | i3W1 | i3W2 | i3W3 | i3W4 | i3W5 |    | i3W6 | i3W7 | i3W8 | i3W9 | i3W10 |  +  |
+// | TAB | 1/F1 | 2/F2 | 3/F3 | 4/F4 | 5/F5 |    | 6/F6 | 7/F7 | 8/F8 | 9/F9 | 0/F10 |  ́   |
+// |  <  | AG-1 |   @  |   £  |   $  | AG-5 |    | AG-6 |  {   |  [   |  ]   |  }    |  ̈   |
 //                   | NEXT |   ESC | LSHFT |    | ENTER | SPACE | BSPC |
 //                   | PREV | LCRTL |  LGUI |    | RCTRL | ALTGR | FNUM |
                         bindings = <
-   &kp daHALF  &kp i3WS1   &kp i3WS2  &kp daHASH  &kp daCURR  &kp daPERC    &kp daAMPS  &kp daFSLH  &kp daLPAR  &kp daRPAR  &kp daEQUAL &kp LS(daPLUS)
-   &kp TAB     &n1_f1      &n2_f2     &n3_f3      &n4_f4      &n5_f5        &n6_f6      &n7_f7      &n8_f8      &n9_f9      &n0_f10     &kp daPLUS
-   &kp daLT    &kp RA(N1)  &kp daAT   &kp daGBP   &kp daUSD   &kp RA(N6)    &kp daAPO   &kp daLBRC  &kp daLBKT  &kp daRBKT  &kp daRBRC  &kp daBSLH
+   &kp daHALF  &kp i3WS1   &kp i3WS2  &kp i3WS3   &kp i3WS4   &kp i3WS5     &kp i3WS6   &kp i3WS7   &kp i3WS8   &kp i3WS9   &kp i3W10   &kp daPLUS
+   &kp TAB     &n1_f1      &n2_f2     &n3_f3      &n4_f4      &n5_f5        &n6_f6      &n7_f7      &n8_f8      &n9_f9      &n0_f10     &kp daAIGU
+   &kp daLT    &kp RA(N1)  &kp daAT   &kp daGBP   &kp daUSD   &kp RA(N5)    &kp RA(N6)  &kp daLBRC  &kp daLBKT  &kp daRBKT  &kp daRBRC  &kp daUMLA
                                          &td1  &mt LCTRL ESC  &shft_gui     &mt RCTRL ENTER  &mt RALT SPACE  &lt LAYER_1 BSPC
                         >;
                 };

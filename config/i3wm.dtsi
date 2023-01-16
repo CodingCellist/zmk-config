@@ -10,54 +10,33 @@
 
 // NAVIGATING //
 
-#define i3LEFT      (LG(LEFT))      /* move left            */
+#define I3LEFT      (LG(LEFT))      /* move left            */
+#define I3RIGHT     (LG(RIGHT))     /* move right           */
+#define I3UP        (LG(UP))        /* move up              */
+#define I3DOWN      (LG(DOWN))      /* move down            */
 
-#define i3RIGHT     (LG(RIGHT))     /* move right           */
-
-#define i3UP        (LG(UP))        /* move up              */
-
-#define i3DOWN      (LG(DOWN))      /* move down            */
-
-#define i3WS1       (LG(N1))        /* go to workspace 1    */
-
-#define i3WS2       (LG(N2))        /* go to workspace 2    */
-
-#define i3WS3       (LG(N3))        /* go to workspace 3    */
-
-#define i3WS4       (LG(N4))        /* go to workspace 4    */
-
-#define i3WS5       (LG(N5))        /* go to workspace 5    */
-
-#define i3WS6       (LG(N6))        /* go to workspace 6    */
-
-#define i3WS7       (LG(N7))        /* go to workspace 7    */
-
-#define i3WS8       (LG(N8))        /* go to workspace 8    */
-
-#define i3WS9       (LG(N9))        /* go to workspace 9    */
-
-#define i3WS0       (LG(N0))        /* go to workspace 10   */
+#define I3WS1       (LG(N1))        /* go to workspace 1    */
+#define I3WS2       (LG(N2))        /* go to workspace 2    */
+#define I3WS3       (LG(N3))        /* go to workspace 3    */
+#define I3WS4       (LG(N4))        /* go to workspace 4    */
+#define I3WS5       (LG(N5))        /* go to workspace 5    */
+#define I3WS6       (LG(N6))        /* go to workspace 6    */
+#define I3WS7       (LG(N7))        /* go to workspace 7    */
+#define I3WS8       (LG(N8))        /* go to workspace 8    */
+#define I3WS9       (LG(N9))        /* go to workspace 9    */
+#define I3WS0       (LG(N0))        /* go to workspace 10   */
 
 
 // MOVING //
 
-#define i3MVWS1     (LS(LG(N1)))    /* move to workspace 1  */
-
-#define i3MVWS2     (LS(LG(N2)))    /* move to workspace 2  */
-
-#define i3MVWS3     (LS(LG(N3)))    /* move to workspace 3  */
-
-#define i3MVWS4     (LS(LG(N4)))    /* move to workspace 4  */
-
-#define i3MVWS5     (LS(LG(N5)))    /* move to workspace 5  */
-
-#define i3MVWS6     (LS(LG(N6)))    /* move to workspace 6  */
-
-#define i3MVWS7     (LS(LG(N7)))    /* move to workspace 7  */
-
-#define i3MVWS8     (LS(LG(N8)))    /* move to workspace 8  */
-
-#define i3MVWS9     (LS(LG(N9)))    /* move to workspace 9  */
-
-#define i3MVWS0     (LS(LG(N0)))    /* move to workspace 10 */
+#define I3MVWS1     (LS(LG(N1)))    /* move to workspace 1  */
+#define I3MVWS2     (LS(LG(N2)))    /* move to workspace 2  */
+#define I3MVWS3     (LS(LG(N3)))    /* move to workspace 3  */
+#define I3MVWS4     (LS(LG(N4)))    /* move to workspace 4  */
+#define I3MVWS5     (LS(LG(N5)))    /* move to workspace 5  */
+#define I3MVWS6     (LS(LG(N6)))    /* move to workspace 6  */
+#define I3MVWS7     (LS(LG(N7)))    /* move to workspace 7  */
+#define I3MVWS8     (LS(LG(N8)))    /* move to workspace 8  */
+#define I3MVWS9     (LS(LG(N9)))    /* move to workspace 9  */
+#define I3MVWS0     (LS(LG(N0)))    /* move to workspace 10 */
 

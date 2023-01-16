@@ -80,15 +80,6 @@
                     bindings = <&kp LSHFT>, <&kp LGUI>;
             };
 
-            // 1-tap for LSHIFT, 2-tap for LSHIFT+LGUI
-            shft_lsgui: td_lshft_lsgui {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "TD_LSHFT_LSLGUI";
-                    #binding-cells= <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp LSHFT>, <&kp LS(LGUI)>;
-            };
-
             // 1-tap for the number '1', 2-tap for F1
             n1_f1: td_n1_f1 {
                     compatible = "zmk,behavior-tap-dance";
@@ -210,7 +201,7 @@
                         bindings = <
    &kp daHALF  &kp daEXCL  &kp daDQT  &kp daHASH  &kp daCURR  &kp daPERC    &kp daAMPS  &kp daFSLH  &kp daLPAR  &kp daRPAR  &kp daEQUAL &kp LS(daPLUS)
    &kp TAB     &n1_f1      &n2_f2     &n3_f3      &n4_f4      &n5_f5        &n6_f6      &n7_f7      &n8_f8      &n9_f9      &n0_f10     &kp daPLUS
-   &kp daLT    &trans      &kp daAT   &kp daGBP   &kp daUSD   &trans        &kp daAPO   &kp daLBRC  &kp daLBKT  &kp daRBKT  &kp RBRC    &kp daBSLH
+   &kp daLT    &trans      &kp daAT   &kp daGBP   &kp daUSD   &trans        &kp daAPO   &kp daLBRC  &kp daLBKT  &kp daRBKT  &kp daRBRC  &kp daBSLH
                                          &td1  &mt LCTRL ESC  &shft_gui     &mt RCTRL ENTER  &mt RALT SPACE  &lt LAYER_1 BSPC
                         >;
                 };

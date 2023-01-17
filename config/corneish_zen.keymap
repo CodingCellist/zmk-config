@@ -196,14 +196,14 @@
                 layer_1 {
                         label = "FNUM";
 // -----------------------------------------------------------------------------------------
-// | '½' | 1/F1 | 2/F2 | 3/F3 | 4/F4 | 5/F5 |    | 6/F6 | 7/F7 | 8/F8 | 9/F9 | 0/F10 |  +  |
-// | TAB | i3W1 | i3W2 | i3W3 | i3W4 | i3W5 |    | i3W6 | i3W7 | i3W8 | i3W9 | i3W10 |  ́   |
+// | '½' | i3W1 | i3W2 | i3W3 | i3W4 | i3W5 |    | i3W6 | i3W7 | i3W8 | i3W9 | i3W10 |  +  |
+// | TAB | 1/F1 | 2/F2 | 3/F3 | 4/F4 | 5/F5 |    | 6/F6 | 7/F7 | 8/F8 | 9/F9 | 0/F10 |  ́   |
 // |  <  | AG-1 |   @  |   £  |   $  | AG-5 |    | AG-6 |  {   |  [   |  ]   |  }    |  ̈   |
 //                   | NEXT |   ESC | LSHFT |    | ENTER | SPACE | BSPC |
 //                   | PREV |  LALT |  LGUI |    | RCTRL | ALTGR | FNUM |
                         bindings = <
-   &kp daHALF  &n1_f1      &n2_f2     &n3_f3      &n4_f4      &n5_f5        &n6_f6      &n7_f7      &n8_f8      &n9_f9      &n0_f10     &kp daPLUS
-   &kp TAB     &kp LG(N1)  &kp LG(N2) &kp LG(N3)  &kp LG(N4)  &kp LG(N5)    &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(N0)  &kp daAIGU
+   &kp daHALF  &kp LG(N1)  &kp LG(N2) &kp LG(N3)  &kp LG(N4)  &kp LG(N5)    &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(N0)  &kp daPLUS
+   &kp TAB     &n1_f1      &n2_f2     &n3_f3      &n4_f4      &n5_f5        &n6_f6      &n7_f7      &n8_f8      &n9_f9      &n0_f10     &kp daAIGU
    &kp daLT    &kp RA(N1)  &kp daAT   &kp daGBP   &kp daUSD   &kp RA(N5)    &kp RA(N6)  &kp daLBRC  &kp daLBKT  &kp daRBKT  &kp daRBRC  &kp daUMLA
                                            &td1  &mt LALT ESC  &shft_gui    &mt RCTRL ENTER  &mt RALT SPACE  &lt LAYER_1 BSPC
                         >;

@@ -172,6 +172,15 @@
                     bindings = <&kp N0>, <&kp F10>;
             };
 
+            // tap-dance for Å and '+' (which is needed for '?')
+            aa_plus: td_aa_plus {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TD_AA_PLUS";
+                    #binding-cells= <0>;
+                    tapping-term-ms = <150>;
+                    bindings = <&kp daAA>, <&kp daPLUS>;
+            };
+
         };
 
         keymap {
@@ -180,13 +189,13 @@
                 default_layer {
                         label = "QWERTY";
 // -----------------------------------------------------------------------------------------
-// | '|' |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  Å  |
+// | '|' |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | Å/+ |
 // | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  Æ  |  Ø  |
 // |  <  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  |  '  |
 //              | NEXT |   ESC | LSHFT |   | ENTER | SPACE | BSPC |
 //              | PREV | LCRTL |  LGUI |   | RCTRL | ALTGR | FNUM |
                         bindings = <
-   &kp daPIPE &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P       &kp daAA
+   &kp daPIPE &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P       &aa_plus
    &kp TAB    &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp daAE    &kp daOE
    &kp daLT   &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp daMINUS &kp daAPO
              &td0  &mt LCTRL ESC  &shft_gui    &mt RCTRL ENTER  &mt RALT SPACE  &lt LAYER_1 BSPC

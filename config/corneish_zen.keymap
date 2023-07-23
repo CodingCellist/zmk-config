@@ -19,8 +19,10 @@
 // LAYERS //
 
 #define DEFAULT   0
-#define LAYER_1   1
-#define LAYER_2   2
+#define HALF_MAG  1
+#define LNUMBER   2
+#define LNAVMED   3
+#define MAGIC     4
 
 
 // ZMK STUFF //
@@ -181,6 +183,23 @@
                     bindings = <&kp daAA>, <&kp daPLUS>;
             };
 
+            // hold for L3, double-tap for switch _to_ L3
+            l3_navmed: td_navmed {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TD_LNAVMED";
+                    #binding-cells= <0>;
+                    tapping-term-ms = <150>;
+                    bindings = <&mo LNAVMED>, <&to LNAVMED>;
+            };
+
+			// hold for L3, double-tap for switch _to_ L0/DEFAULT
+            l3_esc_hatch: td_l3_default {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TD_LNAVMED";
+                    #binding-cells= <0>;
+                    tapping-term-ms = <150>;
+                    bindings = <&mo LNAVMED>, <&to DEFAULT>;
+            };
         };
 
         keymap {
@@ -188,51 +207,102 @@
 
                 default_layer {
                         label = "QWERTY";
+                        bindings = <
 // -----------------------------------------------------------------------------------------
+// 0
 // | '|' |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | Å/+ |
 // | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  Æ  |  Ø  |
 // |  <  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  |  '  |
-//              | NEXT |   ESC | LSHFT |   | ENTER | SPACE | BSPC |
-//              | PREV | LCRTL |  LGUI |   | RCTRL | ALTGR | FNUM |
-                        bindings = <
-   &kp daPIPE &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P       &aa_plus
-   &kp TAB    &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp daAE    &kp daOE
-   &kp daLT   &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp daMINUS &kp daAPO
-             &td0  &mt LCTRL ESC  &shft_gui    &mt RCTRL ENTER  &mt RALT SPACE  &lt LAYER_1 BSPC
+//  ^ LT        | LTL3 | LSHFT | LCTRL |   | ENTER | SPACE | BKSP |
+//              | LTL3 |   ESC | _____ |   | RALT  | xxxxx | LTL2 |
+   &kp daPIPE          &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P       &aa_plus
+   &kp TAB             &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp daAE    &kp daOE
+   &lt HALF_MAG daLT   &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp daMINUS &kp daAPO
+                &l3_navmed  &mt LSHFT ESC  &kp LCTRL    &mt RALT ENTER  &kp SPACE  &lt LNUMBER BSPC
                         >;
                 };
 
-                layer_1 {
-                        label = "FNUM";
-// -----------------------------------------------------------------------------------------
-// | '½' | i3W1 | i3W2 | i3W3 | i3W4 | i3W5 |    | i3W6 | i3W7 | i3W8 | i3W9 | i3W10 |  +  |
-// | TAB | 1/F1 | 2/F2 | 3/F3 | 4/F4 | 5/F5 |    | 6/F6 | 7/F7 | 8/F8 | 9/F9 | 0/F10 |  ́   |
-// |  <  | AG-1 |   @  |   £  |   $  | AG-5 |    | AG-6 |  {   |  [   |  ]   |  }    |  ̈   |
-//                   | NEXT |   ESC | LSHFT |    | ENTER | SPACE | BSPC |
-//                   | PREV |  LALT |  LGUI |    | RCTRL | ALTGR | FNUM |
+                half_magic_layer {
+                        label = "QWERTY";
                         bindings = <
-   &kp daHALF  &kp LG(N1)  &kp LG(N2) &kp LG(N3)  &kp LG(N4)  &kp LG(N5)    &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(N0)  &kp daPLUS
-   &kp TAB     &n1_f1      &n2_f2     &n3_f3      &n4_f4      &n5_f5        &n6_f6      &n7_f7      &n8_f8      &n9_f9      &n0_f10     &kp daAIGU
-   &kp daLT    &kp RA(N1)  &kp daAT   &kp daGBP   &kp daUSD   &kp RA(N5)    &kp RA(N6)  &kp daLBRC  &kp daLBKT  &kp daRBKT  &kp daRBRC  &kp daUMLA
-                                           &td1  &mt LALT ESC  &shft_gui    &mt RCTRL ENTER  &mt RALT SPACE  &lt LAYER_1 BSPC
+// -----------------------------------------------------------------------------------------
+// 1
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+// |  BT |     |     |     |     |     |   |     |     |     |     |     |     |
+// | (H) |     |     |     |     |     |   |     |     |     |     |     |     |
+//              |      |       |       |   |       |       |      |
+//              |      |       |       |   |       |       |      |
+   &trans    &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
+   &to MAGIC &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
+   &trans    &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
+                         &trans  &trans  &trans    &trans  &trans  &trans
                         >;
                 };
 
-                layer_2 {
-                        label = "BTNAV";
-// -----------------------------------------------------------------------------------------
-// |  BT1 | BT2 | BT3 | BT4 | BT5 | VOL+ |   |       |     |  ́   |     |     |     |
-// |  TAB | BL+ | PGU |  ↑  | PGD | VOL- |   |       |     |  ̈   |     |     |     |
-// | BTCLR| BL- |  ←  |  ↓  |  →  | MUTE |   | PRTSC |     |  '  |     |     |     |
-//                | NEXT |   ESC | LSHFT |   | ENT   | SPC   | BSPC |
-//                | PREV | LCRTL |       |   | RCTRL | ALTGR |      |
+                number_layer {
+                        label = "NUMBER";
                         bindings = <
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp C_VOL_UP    &trans    &trans &kp daAIGU &trans &trans &trans
-   &kp TAB      &kp C_BRI_UP &kp PG_UP    &kp UP       &kp PG_DN    &kp C_VOL_DN    &trans    &trans &kp daUMLA &trans &trans &trans
-   &bt BT_CLR   &kp C_BRI_DN &kp LEFT     &kp DOWN     &kp RIGHT    &kp C_MUTE      &kp PSCRN &trans &kp daAPO  &trans &trans &trans
-                                                  &td2  &mt LCTRL ESC  &kp LSHFT    &mt RCTRL ENTER  &mt RALT SPACE  &kp BSPC
+// -----------------------------------------------------------------------------------------
+// 2
+// |     | RA1 |  @  |  £  |  $  | RA5 |   | RA6 |  {  |  [  |  ]  |  }  |     |
+// |     |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
+// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+//              | ____ | LSHFT | LCTRL |   | ENTER | SPACE | BKSP |
+//              | ____ |   ESC | _____ |   | RALT  | xxxxx | LSL3 |
+   &trans &kp RA(N1) &kp RA(N2) &kp RA(N3) &kp RA(N4) &kp RA(N5)    &kp RA(N6) &kp RA(N7) &kp RA(N8) &kp RA(N9) &kp RA(N0) &trans
+   &trans &kp N1     &kp N2     &kp N3     &kp N4     &kp N5        &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
+   &trans &trans     &trans     &trans     &trans     &trans        &trans     &trans     &trans     &trans     &trans     &trans
+                                          &trans  &trans  &trans    &trans  &trans  &trans
                         >;
                 };
+// TODO: put FN keys on here somehow?
+
+                number_layer {
+                        label = "NAVMED";
+                        bindings = <
+// -----------------------------------------------------------------------------------------
+// 3
+// |     |     |     |     |     | VO+ |   |     |     |     |     | LCK |     |
+// |     |     |     |     |     | VO- |   |     |iL/mL|     |     |iR/mR|     |
+// |     | PGU | PGD |  ↓  |  ↑  | VOM |   |     | HOM | END |     |     |     |
+//              | (HL) | LSHFT | LCTRL |   | ENTER | SPACE | DEL  |
+//              | LTL1 |   ESC | _____ |   | RALT  | xxxxx | ____ |
+   &trans &trans    &trans        &trans        &trans &kp C_VOL_UP    &trans &trans     &trans   &trans &trans    &trans
+   &trans &trans    &kp LC(PG_UP) &kp LC(PG_DN) &trans &kp C_VOL_DN    &trans &i3_l_mov  &trans   &trans &i3_r_mov &trans
+   &trans &kp PG_UP &kp PG_DN     &kp DOWN      &kp UP &kp C_MUTE      &trans &kp HOME   &kp END  &trans &trans    &trans
+                                             &l3_esc_hatch  &trans  &trans    &trans  &trans  &trans
+                        >;
+                };
+
+				number_layer {
+                        label = "MAGIC";
+                        bindings = <
+// -----------------------------------------------------------------------------------------
+// 4 (MAGIC)
+// |     | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |     |
+// |     |     |     |     | BTL |     |   |     | BTL |     |     |     |     |
+// |     |     |     |     |     |BTCLR|   |     |     |     |     |     |     |
+//              | LTL1 | _____ | _____ |   | _____ | _____ | ____ |
+//              | ____ | _____ | _____ |   | _____ | _____ | ____ |
+   &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none &none       &none  &none &none &none
+   &none &none        &none        &none        &bootloader  &none           &none &bootloader &none  &none &none &none
+   &none &none        &none        &none        &none        &bt BT_CLR      &none &none       &none  &none &none &none
+                                               &to DEFAULT  &none  &none     &none  &none  &none
+                        >;
+                };
+
+/**
+ * // Separate shift layer? For selection?
+ * // LSHFT
+ * // -----------------------------------------------------------------------------------------
+ * // |     |     |     |     |     |     |   |     |     |     |     |     |     |
+ * // |     |     |     |     |     |     |   |     |     |     |     |     |     |
+ * // |     |     |     |     |     |     |   |     |     |     |     |     |     |
+ * //              | ____ | (HLD) | LCTRL |   | ENTER |  END  | BKSP |
+ * //              | ____ |   ESC | _____ |   | _____ | _____ | RALT |
+ * 
+ * // GUI would also LS(GUI) and a layer with numbers?
+ */
 
         };
 };

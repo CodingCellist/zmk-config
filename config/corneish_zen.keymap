@@ -45,6 +45,7 @@
         // the right tap-dances in their respective layers.
         behaviors {
 
+            /** FIXME: erasable?
             // NEXT and PREV for default layer
             td0: tap_dance_0 {
                     compatible = "zmk,behavior-tap-dance";
@@ -173,6 +174,7 @@
                     tapping-term-ms = <150>;
                     bindings = <&kp N0>, <&kp F10>;
             };
+            */
 
             // tap-dance for Å and '+' (which is needed for '?')
             aa_plus: td_aa_plus {
@@ -192,7 +194,7 @@
                     bindings = <&mo LNAVMED>, <&to LNAVMED>;
             };
 
-			// hold for L3, double-tap for switch _to_ L0/DEFAULT
+            // hold for L3, double-tap for switch _to_ L0/DEFAULT
             l3_esc_hatch: td_l3_default {
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_LNAVMED";
@@ -274,7 +276,7 @@
                         >;
                 };
 
-				number_layer {
+                number_layer {
                         label = "MAGIC";
                         bindings = <
 // -----------------------------------------------------------------------------------------

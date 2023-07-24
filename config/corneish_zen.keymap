@@ -210,7 +210,7 @@
                     label = "TD_I3_L_MOV";
                     #binding-cells= <0>;
                     tapping-term-ms = <150>;
-                    bindings = <&kp LGUI(H)>, <&kp LS(LGUI(H))>;
+                    bindings = <&kp LG(H)>, <&kp LS(LG(H))>;
             };
 
             // i3wm: tap once for navigating right, twice to move the current
@@ -220,7 +220,7 @@
                     label = "TD_I3_R_MOV";
                     #binding-cells= <0>;
                     tapping-term-ms = <150>;
-                    bindings = <&kp LGUI(S)>, <&kp LS(LGUI(S))>;
+                    bindings = <&kp LG(S)>, <&kp LS(LG(S))>;
             };
         };
 

@@ -54,6 +54,42 @@
                     bindings = <&kp daAA>, <&kp daPLUS>;
             };
 
+            // tap-dance for '|' and ' ́́'
+            pipe_acute: td_pipe_acute {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TD_PIPE_ACUTE";
+                    #binding-cells= <0>;
+                    tapping-term-ms = <150>;
+                    bindings = <&kp daPIPE>, <&kp daACUTE>;
+            };
+
+            // tap-dance for "'" and ' ̈'
+            apo_umla: td_apo_umla {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TD_APO_UMLA";
+                    #binding-cells= <0>;
+                    tapping-term-ms = <150>;
+                    bindings = <&kp daAPO>, <&kp daUMLA>;
+            };
+
+            // tap-dance for ALT_GR( "'" and ' ̈' )
+            ralt_apo_umla: td_ralt_apo_umla {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TD_RALT_APO_UMLA";
+                    #binding-cells= <0>;
+                    tapping-term-ms = <150>;
+                    bindings = <&kp RA(daAPO)>, <&kp RA(daUMLA)>;
+            };
+
+            // tap-dance for mod-tap LSHIFT/ESC and LGUI (for i3 reasons)
+            lsesc_super: td_lsesc_super {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TD_LSESC_SUPER";
+                    #binding-cells= <0>;
+                    tapping-term-ms = <150>;
+                    bindings = <&mt LSHFT ESC>, <&kp LGUI>;
+            };
+
             // hold for L3, double-tap for switch _to_ L3
             l3_navmed: td_navmed {
                     compatible = "zmk,behavior-tap-dance";
@@ -101,15 +137,16 @@
                         bindings = <
 // -----------------------------------------------------------------------------------------
 // 0
-// | '|' |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | Å/+ |
+// | |/ ́́ |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | Å/+ |
 // | TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  Æ  |  Ø  |
-// |  <  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  |  '  |
+// |  <  |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  -  | '/ ̈ |
 //  ^ LT        | LTL3 | LSHFT | LCTRL |   | ENTER | SPACE | BKSP |
 //              | LTL3 |   ESC | _____ |   | RALT  | xxxxx | LTL2 |
-   &kp daPIPE          &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P       &aa_plus
+//              |      |  LGUI | _____ |   |       |       |      |
+   &pipe_acute         &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P       &aa_plus
    &kp TAB             &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp daAE    &kp daOE
-   &lt HALF_MAG daLT   &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp daMINUS &kp daAPO
-                &l3_navmed  &mt LSHFT ESC  &kp LCTRL    &mt RALT ENTER  &kp SPACE  &lt LNUMBER BSPC
+   &lt HALF_MAG daLT   &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp daMINUS &apo_umla
+                 &l3_navmed  &lsesc_super  &kp LCTRL    &mt RALT ENTER  &kp SPACE  &lt LNUMBER BSPC
                         >;
                 };
 
@@ -137,12 +174,12 @@
 // 2
 // |     | RA1 |  @  |  £  |  $  | RA5 |   | RA6 |  {  |  [  |  ]  |  }  |     |
 // |     |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
-// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+// |     |     |     |     |     |     |   |     |     |     |     |     |  /~ |
 //              | ____ | LSHFT | LCTRL |   | ENTER | SPACE | BKSP |
 //              | ____ |   ESC | _____ |   | RALT  | xxxxx | LSL3 |
    &trans &kp RA(N1) &kp RA(N2) &kp RA(N3) &kp RA(N4) &kp RA(N5)    &kp RA(N6) &kp RA(N7) &kp RA(N8) &kp RA(N9) &kp RA(N0) &trans
    &trans &kp N1     &kp N2     &kp N3     &kp N4     &kp N5        &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
-   &trans &trans     &trans     &trans     &trans     &trans        &trans     &trans     &trans     &trans     &trans     &trans
+   &trans &trans     &trans     &trans     &trans     &trans        &trans     &trans     &trans     &trans     &trans     &ralt_apo_umla
                                           &trans  &trans  &trans    &trans  &trans  &trans
                         >;
                 };
@@ -153,15 +190,15 @@
                         bindings = <
 // -----------------------------------------------------------------------------------------
 // 3
-// |     |     |     |     |     | VO+ |   |     |     |     |     | LCK |     |
-// | i3A |     |     |     |     | VO- |   |     |iL/mL|     |     |iR/mR|     |
+// |     |     |     |     |     | VO+ |   |  F6 |     |     |     | LCK |     |
+// | i3A |     |     | TPR | TNX | VO- |   |     |iL/mL|     |     |iR/mR|     |
 // |     | PGU | PGD |  ↓  |  ↑  | VOM |   |     | HOM | END |     |     |     |
 //              | (HL) | LSHFT | LCTRL |   | ENTER | SPACE | DEL  |
 //              | LTL1 |   ESC | _____ |   | RALT  | xxxxx | ____ |
-   &trans    &trans    &trans        &trans        &trans &kp C_VOL_UP    &trans &trans     &trans   &trans &trans    &trans
-   &kp LG(A) &trans    &kp LC(PG_UP) &kp LC(PG_DN) &trans &kp C_VOL_DN    &trans &i3_l_mov  &trans   &trans &i3_r_mov &trans
-   &trans    &kp PG_UP &kp PG_DN     &kp DOWN      &kp UP &kp C_MUTE      &trans &kp HOME   &kp END  &trans &trans    &trans
-                                         &l3_esc_hatch  &trans  &trans    &trans  &trans  &trans
+   &trans    &trans    &trans    &trans        &trans        &kp C_VOL_UP    &kp F6 &trans     &trans   &trans &trans    &trans
+   &kp LG(A) &trans    &trans    &kp LC(PG_UP) &kp LC(PG_DN) &kp C_VOL_DN    &trans &i3_l_mov  &trans   &trans &i3_r_mov &trans
+   &trans    &kp PG_UP &kp PG_DN &kp DOWN      &kp UP        &kp C_MUTE      &trans &kp HOME   &kp END  &trans &trans    &trans
+                                            &l3_esc_hatch  &trans  &trans    &trans  &trans  &trans
                         >;
                 };
 

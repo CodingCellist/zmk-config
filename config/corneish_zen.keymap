@@ -54,13 +54,13 @@
                     bindings = <&kp daAA>, <&kp daPLUS>;
             };
 
-            // tap-dance for '|' and ' ́́'
-            pipe_acute: td_pipe_acute {
+            // tap-dance for ' ́́' and '|'
+            acute_pipe: td_acute_pipe {
                     compatible = "zmk,behavior-tap-dance";
-                    label = "TD_PIPE_ACUTE";
+                    label = "TD_ACUTE_PIPE";
                     #binding-cells= <0>;
                     tapping-term-ms = <150>;
-                    bindings = <&kp daPIPE>, <&kp daACUTE>;
+                    bindings = <&kp daACUTE>, <&kp daPIPE>;
             };
 
             // tap-dance for "'" and ' ̈'
@@ -86,7 +86,7 @@
                     compatible = "zmk,behavior-tap-dance";
                     label = "TD_LSESC_SUPER";
                     #binding-cells= <0>;
-                    tapping-term-ms = <150>;
+                    tapping-term-ms = <180>;
                     bindings = <&mt LSHFT ESC>, <&kp LGUI>;
             };
 
@@ -143,7 +143,7 @@
 //  ^ LT        | LTL3 | LSHFT | LCTRL |   | ENTER | SPACE | BKSP |
 //              | LTL3 |   ESC | _____ |   | RALT  | xxxxx | LTL2 |
 //              |      |  LGUI | _____ |   |       |       |      |
-   &pipe_acute         &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P       &aa_plus
+   &acute_pipe         &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P       &aa_plus
    &kp TAB             &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp daAE    &kp daOE
    &lt HALF_MAG daLT   &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp daMINUS &apo_umla
                  &l3_navmed  &lsesc_super  &kp LCTRL    &mt RALT ENTER  &kp SPACE  &lt LNUMBER BSPC

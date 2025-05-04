@@ -1,5 +1,19 @@
 name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths-ignore:
+      - 'LICENSE'
+      - 'README.md'
+
+  pull_request:
+    paths-ignore:
+      - 'LICENSE'
+      - 'README.md'
+
+  workflow_dispatch:
+    paths-ignore:
+      - 'LICENSE'
+      - 'README.md'
 
 jobs:
   build:

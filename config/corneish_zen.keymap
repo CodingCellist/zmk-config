@@ -54,6 +54,15 @@
                     bindings = <&kp N3>, <&kp RA(E)>;
             };
 
+            // tap-dance for Ø and dead-key ' ́́'
+            oe_pipe: td_oe_pipe {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TD_OE_PIPE";
+                    #binding-cells= <0>;
+                    tapping-term-ms = <150>;
+                    bindings = <&kp daOE>, <&kp daPIPE>;
+            };
+
             // tap-dance for Å and '+' (which is needed for '?')
             aa_plus: td_aa_plus {
                     compatible = "zmk,behavior-tap-dance";
@@ -63,13 +72,13 @@
                     bindings = <&kp daAA>, <&kp daPLUS>;
             };
 
-            // tap-dance for ' ́́' and '|'
-            acute_pipe: td_acute_pipe {
+            // tap-dance for ' ́́' and '½' (which is needed for '|')
+            acute_half: td_acute_half {
                     compatible = "zmk,behavior-tap-dance";
-                    label = "TD_ACUTE_PIPE";
+                    label = "TD_ACUTE_HALF";
                     #binding-cells= <0>;
                     tapping-term-ms = <150>;
-                    bindings = <&kp daACUTE>, <&kp daPIPE>;
+                    bindings = <&kp daACUTE>, <&kp daHALF>;
             };
 
             // tap-dance for "'" and ' ̈'
@@ -152,8 +161,8 @@
 //  ^ LT        | LTL3 | LSHFT | LCTRL |   | ENTER | SPACE | BKSP |
 //              | LTL3 |   ESC | _____ |   | RALT  | xxxxx | LTL2 |
 //              |      |  LGUI | _____ |   |       |       |      |
-   &acute_pipe         &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P       &aa_plus
-   &kp TAB             &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp daAE    &kp daOE
+   &acute_half         &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P       &aa_plus
+   &kp TAB             &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp daAE    &oe_pipe
    &lt HALF_MAG daLT   &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp daMINUS &apo_umla
                  &l3_navmed  &lsesc_super  &kp LCTRL    &mt RALT ENTER  &kp SPACE  &lt LNUMBER BSPC
                         >;

@@ -13,7 +13,7 @@ on:
 
 jobs:
   zmk_build:
-    uses: CodingCellist/zmk/.github/workflows/build-user-config.yml@west-env
+    uses: CodingCellist/zmk/.github/workflows/build-user-config.yml@main
     with:
       build_matrix_path: "./zmk-config/build.yaml"
       config_path: "./zmk-config/config"

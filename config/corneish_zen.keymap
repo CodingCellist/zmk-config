@@ -28,10 +28,10 @@
 // ZMK STUFF //
 
 / {
-  chosen {
-    zmk,matrix_transform = &default_transform;
-    //zmk,matrix_transform = &five_column_transform;
-  };
+    chosen {
+        zmk,physical-layout = &foostan_corne_6col_layout;
+        // zmk,physical-layout = &foostan_corne_5col_layout;
+    };
 };
 
 
@@ -152,7 +152,6 @@
 
                 default_layer {
                         label = "QWERTY";
-                        bindings = <
 // -----------------------------------------------------------------------------------------
 // 0
 // | |/ ́́ |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  | Å/+ |
@@ -161,6 +160,7 @@
 //  ^ LT        | LTL3 | LSHFT | LCTRL |   | ENTER | SPACE | BKSP |
 //              | LTL3 |   ESC | _____ |   | RALT  | xxxxx | LTL2 |
 //              |      |  LGUI | _____ |   |       |       |      |
+                        bindings = <
    &acute_half         &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P       &aa_plus
    &kp TAB             &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp daAE    &oe_pipe
    &lt HALF_MAG daLT   &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp daMINUS &apo_umla
@@ -170,7 +170,6 @@
 
                 half_magic_layer {
                         label = "QWERTY";
-                        bindings = <
 // -----------------------------------------------------------------------------------------
 // 1
 // |     |     |     |     |     |     |   |     |     |     |     |     |     |
@@ -178,6 +177,7 @@
 // | (H) |     |     |     |     |     |   |     |     |     |     |     |     |
 //              |      |       |       |   |       |       |      |
 //              |      |       |       |   |       |       |      |
+                        bindings = <
    &trans    &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
    &to MAGIC &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
    &trans    &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
@@ -187,7 +187,6 @@
 
                 number_layer {
                         label = "NUMBER";
-                        bindings = <
 // -----------------------------------------------------------------------------------------
 // 2
 // |     | RA1 |  @  |  £  |  $  | RA5 |   | RA6 |  {  |  [  |  ]  |  }  |     |
@@ -195,6 +194,7 @@
 // |     |     |     |     |     |     |   |     |     |     |     |     |  /~ |
 //              | ____ | LSHFT | LCTRL |   | ENTER | SPACE | BKSP |
 //              | ____ |   ESC | _____ |   | RALT  | xxxxx | LSL3 |
+                        bindings = <
    &trans &kp RA(N1) &kp RA(N2) &kp RA(N3)  &kp RA(N4) &kp RA(N5)    &kp RA(N6) &kp RA(N7) &kp RA(N8) &kp RA(N9) &kp RA(N0) &trans
    &trans &kp N1     &kp N2     &three_euro &kp N4     &kp N5        &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
    &trans &trans     &trans     &trans      &trans     &trans        &trans     &trans     &trans     &trans     &trans     &ralt_umla_apo
@@ -205,7 +205,6 @@
 
                 navmed_layer {
                         label = "NAVMED";
-                        bindings = <
 // -----------------------------------------------------------------------------------------
 // 3
 // |     |     |     |     |     | VO+ |   |  F6 |     |     |     | LCK |     |
@@ -213,6 +212,7 @@
 // |     | PGU | PGD |  ↓  |  ↑  | VOM |   |     | HOM | END |     |     |     |
 //              | (HL) | LSHFT | LCTRL |   | ENTER | SPACE | DEL  |
 //              | LTL1 |   ESC | _____ |   | RALT  | xxxxx | ____ |
+                        bindings = <
    &trans    &trans    &trans    &trans        &trans        &kp C_VOL_UP    &kp F6 &trans     &trans   &trans &trans    &trans
    &kp LG(A) &trans    &trans    &kp LC(PG_UP) &kp LC(PG_DN) &kp C_VOL_DN    &trans &i3_l_mov  &trans   &trans &i3_r_mov &trans
    &trans    &kp PG_UP &kp PG_DN &kp DOWN      &kp UP        &kp C_MUTE      &trans &kp HOME   &kp END  &trans &trans    &trans
@@ -222,7 +222,6 @@
 
                 magic_layer {
                         label = "MAGIC";
-                        bindings = <
 // -----------------------------------------------------------------------------------------
 // 4 (MAGIC)
 // |     | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |     |
@@ -230,6 +229,7 @@
 // |     |     |     |     |     |BTCLR|   |     |     |     |     |     |     |
 //              | LTL1 | _____ | _____ |   | _____ | _____ | ____ |
 //              | ____ | _____ | _____ |   | _____ | _____ | ____ |
+                        bindings = <
    &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none &none       &none  &none &none &none
    &none &none        &none        &none        &bootloader  &none           &none &bootloader &none  &none &none &none
    &none &none        &none        &none        &none        &bt BT_CLR      &none &none       &none  &none &none &none

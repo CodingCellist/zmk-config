@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: MIT
  *
  * Modified by Thomas E. Hansen (CodingCellist)
- * Copyright (c) 2023 Thomas E. Hansen (CodingCellist)
+ * Copyright (c) 2023,2025 Thomas E. Hansen (CodingCellist)
  * SPDX-License-Identifier: MIT
  *
  */
@@ -45,6 +45,15 @@
         // the right tap-dances in their respective layers.
         behaviors {
 
+            // tap-dance for 3 and '€'
+            three_euro: td_three_euro {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TD_THREE_EURO";
+                    #binding-cells= <0>;
+                    tapping-term-ms = <150>;
+                    bindings = <&kp N3>, <&kp RA(E)>;
+            };
+
             // tap-dance for Å and '+' (which is needed for '?')
             aa_plus: td_aa_plus {
                     compatible = "zmk,behavior-tap-dance";
@@ -72,13 +81,13 @@
                     bindings = <&kp daAPO>, <&kp daUMLA>;
             };
 
-            // tap-dance for ALT_GR( "'" and ' ̈' )
-            ralt_apo_umla: td_ralt_apo_umla {
+            // tap-dance for ALT_GR( ' ̈' and "'" )
+            ralt_umla_apo: td_ralt_umla_apo {
                     compatible = "zmk,behavior-tap-dance";
-                    label = "TD_RALT_APO_UMLA";
+                    label = "TD_RALT_UMLA_APO";
                     #binding-cells= <0>;
                     tapping-term-ms = <150>;
-                    bindings = <&kp RA(daAPO)>, <&kp RA(daUMLA)>;
+                    bindings = <&kp RA(daUMLA)>, <&kp RA(daAPO)>;
             };
 
             // tap-dance for mod-tap LSHIFT/ESC and LGUI (for i3 reasons)
@@ -177,10 +186,10 @@
 // |     |     |     |     |     |     |   |     |     |     |     |     |  /~ |
 //              | ____ | LSHFT | LCTRL |   | ENTER | SPACE | BKSP |
 //              | ____ |   ESC | _____ |   | RALT  | xxxxx | LSL3 |
-   &trans &kp RA(N1) &kp RA(N2) &kp RA(N3) &kp RA(N4) &kp RA(N5)    &kp RA(N6) &kp RA(N7) &kp RA(N8) &kp RA(N9) &kp RA(N0) &trans
-   &trans &kp N1     &kp N2     &kp N3     &kp N4     &kp N5        &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
-   &trans &trans     &trans     &trans     &trans     &trans        &trans     &trans     &trans     &trans     &trans     &ralt_apo_umla
-                                          &trans  &trans  &trans    &trans  &trans  &trans
+   &trans &kp RA(N1) &kp RA(N2) &kp RA(N3)  &kp RA(N4) &kp RA(N5)    &kp RA(N6) &kp RA(N7) &kp RA(N8) &kp RA(N9) &kp RA(N0) &trans
+   &trans &kp N1     &kp N2     &three_euro &kp N4     &kp N5        &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &trans
+   &trans &trans     &trans     &trans      &trans     &trans        &trans     &trans     &trans     &trans     &trans     &ralt_umla_apo
+                                           &trans  &trans  &trans    &trans  &trans  &trans
                         >;
                 };
 // TODO: put FN keys on here somehow?
